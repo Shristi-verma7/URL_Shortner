@@ -85,6 +85,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     .url-box span {
       margin-right: 10px;
     }
+     
+   
+
   </style>
 </head>
 <body>
@@ -94,9 +97,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
    <div class="container">
         <form method="POST">
-            <input type="url" name="url" required placeholder="Enter long URL here...">
-            <button type="submit">Shorten URL</button>
-        </form>
+            <input type="url" name="url" required placeholder="Enter long URL here..."><br></br>
+           <div class="button"> <button type="submit">Submit</button> </div>
+       
+          </form>
 
         <?php if ($short_url): ?>
             <div class="result">
