@@ -34,76 +34,65 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>URL Shortener</title>
-    <style>
-        body {
-    background: #8585a9;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
+  <meta charset="UTF-8">
+  <title>URL Shortener </title>
+  <style>
+    body {
+      background: #b3d1f2;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-    .container {
-    background: #c8c8c8;
-    padding: 40px;
-    border-radius: 8px;
-    width: 400px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+    .card {
+      background: #e6f0fa;
+      border-radius: 20px;
+      padding: 40px;
+      width: 500px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
 
-        h2 {
-            color: #333;
-            margin-bottom: 20px;
-        }
+    .card h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
 
-        input[type="url"] {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 12px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
+    .scissors {
+      font-size: 80px;
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      opacity: 0.8;
+    }
 
-        button {
-            width: 100%;
-            padding: 12px;
-            background: #007bff;
-            color: white;
-            border: none;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    .url-box {
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 16px;
+      overflow-x: auto;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
 
-        button:hover {
-            background: #0056b3;
-        }
-
-        .result {
-            margin-top: 20px;
-            font-size: 15px;
-        }
-
-        .result a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .error {
-            color: red;
-            margin-top: 10px;
-        }
-    </style>
+    .url-box span {
+      margin-right: 10px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h2>🔗 URL Shortener</h2>
+  <div class="card">
+    <div class="scissors">✂️</div>
+    <h1> 🔗 URL Shortener</h1>
+    
+   <div class="container">
         <form method="POST">
             <input type="url" name="url" required placeholder="Enter long URL here...">
             <button type="submit">Shorten URL</button>
@@ -117,5 +106,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="error"><?= $error ?></div>
         <?php endif; ?>
     </div>
+    </div>
 </body>
 </html>
+
+
