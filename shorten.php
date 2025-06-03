@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <title>URL Shortener </title>
   <style>
     body {
-      background: #b3d1f2;
+      background:rgb(103, 84, 70);
       font-family: 'Comic Sans MS', cursive, sans-serif;
       display: flex;
       justify-content: center;
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     .card {
-      background: #e6f0fa;
+      background:rgb(201, 181, 170);
       border-radius: 20px;
       padding: 40px;
       width: 500px;
